@@ -1,3 +1,25 @@
+var foo = 123;
+console.log(foo); //123
+
+{
+    var foo=456;  // 중복선언이 가능, 위에 선언된 애를 블럭내에서도 참조가 되버림
+}
+console.log(foo); //456 , 블럭밖에서도 참조가 됩니다. 
+
+let foo2_ = 789;
+console.log(foo2_); //789
+{
+    let foo2_:number = 456; 
+    // 중복선언이 불가능. 같은 변수를 두번 선언 할 수 없음. 
+    // /위에걸 쓰는게 아니고 블럭내의 변수하나를 새로 만드는것
+    let bar:number = 456;
+    console.log(foo2_);
+    console.log(bar); //456
+}
+foo2_ = 567;
+console.log(foo2_); //789
+
+
 // 먼저 배열하나를 선언해 줍니다.
 let str_: string[] = ["테스트", "연습", "es6"]; 
 let isExist_ = false; // 판단 결과를 저장하기 위한 변수입니다.
