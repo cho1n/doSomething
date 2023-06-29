@@ -8,7 +8,7 @@ const AppContainer = styled.div`
   max-width: 600px;
   margin: 0 auto;
   padding: 20px;
-  font-family: Arial, sans-serif;
+  font-family: Inter;
 `;
 
 const Heading = styled.h1`
@@ -50,10 +50,6 @@ const App: React.FC = () => {
     <Router>
       <AppContainer>
         <Heading>리액트 앱</Heading>
-        <Counter>카운트: {count}</Counter>
-        <Button onClick={increment}>증가</Button>
-        <Button onClick={decrement}>감소</Button>
-
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/about" element={<About />} />
