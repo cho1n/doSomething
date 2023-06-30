@@ -14,6 +14,7 @@ const AppContainer = styled.div`
 const Heading = styled.h1`
   font-size: 24px;
   margin-bottom: 10px;
+  color: red;
 `;
 
 const Counter = styled.p`
@@ -36,20 +37,10 @@ const Button = styled.button`
 `;
 
 const App: React.FC = () => {
-  const [count, setCount] = useState(0);
-
-  const increment = () => {
-    setCount(count + 1);
-  };
-
-  const decrement = () => {
-    setCount(count - 1);
-  };
-
   return (
     <Router>
       <AppContainer>
-        <Heading>리액트 앱</Heading>
+        <Heading> 연습용 앱 </Heading>
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/about" element={<About />} />
